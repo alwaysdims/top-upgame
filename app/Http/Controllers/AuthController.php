@@ -38,4 +38,10 @@ class AuthController extends Controller
             return redirect()->to('/admin/auth/login')->withErrors($errors)->withInput();
         }
     }
+
+
+    // public function cobaLogin(){
+    //     $this->input->post('nik');
+
+    // }
 }

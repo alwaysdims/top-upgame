@@ -76,7 +76,6 @@ class HomeController extends Controller
             'zone_id' => 'required',
             'pilihan' => 'required',
             'jumlah' => 'required',
-            // 'metode' => 'required',
             'total' => 'required',
             'voucher' => 'required',
             'discount' => 'required'
@@ -175,11 +174,12 @@ class HomeController extends Controller
 
     }
     public function buktiPembayaran(Request $request){
+
         $ruls = [
             'transaction_id' => 'required',
             'bukti_pembayaran' => 'required',
-
         ];
+
         $validate = Validator::make($request->all(),$ruls);
         if($validate->fails()){
             return response()->json([
